@@ -16,7 +16,7 @@ namespace Dashboard.Data
         {
             if (account == null)
             {
-                throw new ArgumentNullException("account");
+                throw new ArgumentNullException(nameof(account));
             }
 
             // Verify the credentials are correct.
@@ -46,7 +46,7 @@ namespace Dashboard.Data
         {
             if (account == null)
             {
-                throw new ArgumentNullException("account");
+                throw new ArgumentNullException(nameof(account));
             }
 
             if (!IsSecureEndpointProtocol(account.BlobEndpoint) ||

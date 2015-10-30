@@ -21,17 +21,17 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (account == null)
             {
-                throw new ArgumentNullException("account");
+                throw new ArgumentNullException(nameof(account));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (blobWrittenWatcherSetter == null)
             {
-                throw new ArgumentNullException("blobWrittenWatcherSetter");
+                throw new ArgumentNullException(nameof(blobWrittenWatcherSetter));
             }
 
             _account = account;

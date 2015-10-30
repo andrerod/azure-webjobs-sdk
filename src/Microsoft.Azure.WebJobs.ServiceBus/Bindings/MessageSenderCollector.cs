@@ -19,12 +19,12 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (entity == null)
             {
-                throw new ArgumentNullException("entity");
+                throw new ArgumentNullException(nameof(entity));
             }
 
             if (converter == null)
             {
-                throw new ArgumentNullException("converter");
+                throw new ArgumentNullException(nameof(converter));
             }
 
             _entity = entity;

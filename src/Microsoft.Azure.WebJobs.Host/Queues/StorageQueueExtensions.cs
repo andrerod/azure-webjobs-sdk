@@ -18,7 +18,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             bool isQueueNotFoundException = false;

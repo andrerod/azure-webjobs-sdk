@@ -25,7 +25,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (queueOrTopicNamePattern == null)
             {
-                throw new ArgumentNullException("queueOrTopicNamePattern");
+                throw new ArgumentNullException(nameof(queueOrTopicNamePattern));
             }
 
             BindingTemplate template = BindingTemplate.FromString(queueOrTopicNamePattern);

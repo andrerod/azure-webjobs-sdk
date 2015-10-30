@@ -31,7 +31,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
         {
             if (token == null)
             {
-                throw new ArgumentNullException("token");
+                throw new ArgumentNullException(nameof(token));
             }
 
             if (!Guid.Equals(Guid.Empty, functionOwner))

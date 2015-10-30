@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobs.ServiceBus.UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobs.Host.FunctionalTests", "test\Microsoft.Azure.WebJobs.Host.FunctionalTests\WebJobs.Host.FunctionalTests.csproj", "{C6B834AB-7B6A-47AE-A7C3-C102B0C861FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJob1", "WebJob1\WebJob1.csproj", "{CEA67A31-20A0-4B19-9D94-4DA2E9D9B191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,6 +112,10 @@ Global
 		{C6B834AB-7B6A-47AE-A7C3-C102B0C861FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6B834AB-7B6A-47AE-A7C3-C102B0C861FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6B834AB-7B6A-47AE-A7C3-C102B0C861FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA67A31-20A0-4B19-9D94-4DA2E9D9B191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA67A31-20A0-4B19-9D94-4DA2E9D9B191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA67A31-20A0-4B19-9D94-4DA2E9D9B191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA67A31-20A0-4B19-9D94-4DA2E9D9B191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

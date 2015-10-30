@@ -33,7 +33,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Bindings
             {
                 if (container == null)
                 {
-                    throw new ArgumentNullException("container");
+                    throw new ArgumentNullException(nameof(container));
                 }
 
                 return Task.FromResult<IValueProvider>(new ValueProvider(container.SdkObject));

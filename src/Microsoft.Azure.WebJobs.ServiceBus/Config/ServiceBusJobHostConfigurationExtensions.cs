@@ -22,7 +22,7 @@ namespace Microsoft.Azure.WebJobs
         {
             if (config == null)
             {
-                throw new ArgumentNullException("config");
+                throw new ArgumentNullException(nameof(config));
             }
 
             ServiceBusConfiguration serviceBusConfig = new ServiceBusConfiguration
@@ -46,11 +46,11 @@ namespace Microsoft.Azure.WebJobs
         {
             if (config == null)
             {
-                throw new ArgumentNullException("config");
+                throw new ArgumentNullException(nameof(config));
             }
             if (serviceBusConfig == null)
             {
-                throw new ArgumentNullException("serviceBusConfig");
+                throw new ArgumentNullException(nameof(serviceBusConfig));
             }
 
             ServiceBusExtensionConfig extensionConfig = new ServiceBusExtensionConfig(serviceBusConfig);

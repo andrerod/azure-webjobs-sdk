@@ -18,7 +18,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (client == null)
             {
-                throw new ArgumentNullException("client");
+                throw new ArgumentNullException(nameof(client));
             }
 
             List<IStorageListBlobItem> allResults = new List<IStorageListBlobItem>();

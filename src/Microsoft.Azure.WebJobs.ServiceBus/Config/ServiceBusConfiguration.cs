@@ -73,7 +73,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 _messagingProvider = value;
             }

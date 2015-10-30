@@ -17,7 +17,7 @@ namespace Microsoft.Azure.WebJobs
         {
             if (binder == null)
             {
-                throw new ArgumentNullException("binder");
+                throw new ArgumentNullException(nameof(binder));
             }
 
             return binder.BindAsync<T>(attribute).GetAwaiter().GetResult();

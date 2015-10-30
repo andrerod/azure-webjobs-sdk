@@ -43,12 +43,12 @@ namespace Microsoft.Azure.WebJobs.Host
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
                 if (value > MaxBatchSize)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
                 _batchSize = value;
@@ -74,7 +74,7 @@ namespace Microsoft.Azure.WebJobs.Host
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
                 _newBatchThreshold = value;
@@ -95,7 +95,7 @@ namespace Microsoft.Azure.WebJobs.Host
                 {
                     string message = String.Format(CultureInfo.CurrentCulture,
                         "MaxPollingInterval must not be less than {0}.", QueuePollingIntervals.Minimum);
-                    throw new ArgumentException(message, "value");
+                    throw new ArgumentException(message, nameof(value));
                 }
 
                 _maxPollingInterval = value;
@@ -119,7 +119,7 @@ namespace Microsoft.Azure.WebJobs.Host
             {
                 if (value < 1)
                 {
-                    throw new ArgumentException("MaxDequeueCount must not be less than 1.", "value");
+                    throw new ArgumentException("MaxDequeueCount must not be less than 1.", nameof(value));
                 }
 
                 _maxDequeueCount = value;

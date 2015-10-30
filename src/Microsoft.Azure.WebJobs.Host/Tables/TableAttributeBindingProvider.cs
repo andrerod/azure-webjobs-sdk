@@ -24,12 +24,12 @@ namespace Microsoft.Azure.WebJobs.Host.Tables
         {
             if (accountProvider == null)
             {
-                throw new ArgumentNullException("accountProvider");
+                throw new ArgumentNullException(nameof(accountProvider));
             }
 
             if (extensions == null)
             {
-                throw new ArgumentNullException("extensions");
+                throw new ArgumentNullException(nameof(extensions));
             }
 
             _nameResolver = nameResolver;

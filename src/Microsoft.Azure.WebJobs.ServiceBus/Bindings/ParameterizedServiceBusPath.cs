@@ -45,7 +45,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (bindingData == null)
             {
-                throw new ArgumentNullException("bindingData");
+                throw new ArgumentNullException(nameof(bindingData));
             }
                 
             string queueOrTopicName = _template.Bind(bindingData);

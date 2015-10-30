@@ -30,7 +30,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -64,7 +64,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -89,7 +89,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -126,7 +126,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -164,7 +164,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -201,7 +201,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -239,7 +239,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -276,7 +276,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -310,7 +310,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -335,7 +335,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -372,7 +372,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -409,7 +409,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -447,7 +447,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -486,7 +486,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -524,7 +524,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -561,7 +561,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -596,7 +596,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -619,7 +619,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -645,7 +645,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -683,7 +683,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;
@@ -720,7 +720,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;

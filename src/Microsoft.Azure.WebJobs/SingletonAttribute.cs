@@ -81,7 +81,7 @@ namespace Microsoft.Azure.WebJobs
             {
                 if (value != null && value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
                 _lockAcquisitionTimeout = value;
             }

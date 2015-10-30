@@ -26,7 +26,7 @@ namespace Dashboard.Data
         {
             if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             if (!metadata.ContainsKey(VersionMetadataKey))
@@ -50,7 +50,7 @@ namespace Dashboard.Data
         {
             if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             metadata[VersionMetadataKey] = version.ToString("o", CultureInfo.InvariantCulture);

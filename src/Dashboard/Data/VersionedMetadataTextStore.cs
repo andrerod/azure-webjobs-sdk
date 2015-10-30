@@ -15,11 +15,11 @@ namespace Dashboard.Data
         {
             if (innerStore == null)
             {
-                throw new ArgumentNullException("innerStore");
+                throw new ArgumentNullException(nameof(innerStore));
             }
             else if (versionMapper == null)
             {
-                throw new ArgumentNullException("versionMapper");
+                throw new ArgumentNullException(nameof(versionMapper));
             }
 
             _innerStore = innerStore;
@@ -168,7 +168,7 @@ namespace Dashboard.Data
                 // DateTimeOffset.MinValue is a sentinal value used by the implementation, so it can't be used as a
                 // targetVersion.
                 throw new ArgumentException("targetVersion must be greater than DateTimeOffset.MinValue.",
-                    "targetVersion");
+                    nameof(targetVersion));
             }
 
             IDictionary<string, string> combinedMetadata = Combine(otherMetadata, targetVersion);

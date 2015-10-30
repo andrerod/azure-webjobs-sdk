@@ -36,7 +36,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             _queue = context.Queue;
@@ -212,7 +212,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             bool isQueueNotFoundException = false;

@@ -37,12 +37,12 @@ namespace Dashboard.Data.Logs
         {
             if (client == null)
             {
-                throw new ArgumentNullException("client");
+                throw new ArgumentNullException(nameof(client));
             }
 
             if (string.IsNullOrEmpty(logsContainer))
             {
-                throw new ArgumentNullException("logsContainer");
+                throw new ArgumentNullException(nameof(logsContainer));
             }
 
             if (containerDirectory == null)

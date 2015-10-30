@@ -27,7 +27,7 @@ namespace Dashboard.Data
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             string innerId = CreateInnerId(webJobRunId, timestamp, snapshot.Id);

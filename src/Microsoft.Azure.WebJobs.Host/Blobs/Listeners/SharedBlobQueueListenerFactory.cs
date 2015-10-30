@@ -31,37 +31,37 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (sharedQueueWatcher == null)
             {
-                throw new ArgumentNullException("sharedQueueWatcher");
+                throw new ArgumentNullException(nameof(sharedQueueWatcher));
             }
 
             if (queueClient == null)
             {
-                throw new ArgumentNullException("queueClient");
+                throw new ArgumentNullException(nameof(queueClient));
             }
 
             if (hostBlobTriggerQueue == null)
             {
-                throw new ArgumentNullException("hostBlobTriggerQueue");
+                throw new ArgumentNullException(nameof(hostBlobTriggerQueue));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             if (blobWrittenWatcher == null)
             {
-                throw new ArgumentNullException("blobWrittenWatcher");
+                throw new ArgumentNullException(nameof(blobWrittenWatcher));
             }
 
             _sharedQueueWatcher = sharedQueueWatcher;

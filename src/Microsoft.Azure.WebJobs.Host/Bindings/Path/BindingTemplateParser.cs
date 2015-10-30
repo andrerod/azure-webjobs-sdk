@@ -81,7 +81,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Path
         {
             if (input == null)
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
 
             return GetTokens(input).ToList();

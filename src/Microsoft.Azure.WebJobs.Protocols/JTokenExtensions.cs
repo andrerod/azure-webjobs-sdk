@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (token == null)
             {
-                throw new ArgumentNullException("token");
+                throw new ArgumentNullException(nameof(token));
             }
 
             // The following code is different from token.ToString(), which special-cases null to return "" instead of

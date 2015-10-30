@@ -17,7 +17,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
         {
             if (messageEnqueuedWatcherGetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherGetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherGetter));
             }
 
             _messageEnqueuedWatcherGetter = messageEnqueuedWatcherGetter;
@@ -41,7 +41,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
             {
                 if (messageEnqueuedWatcherGetter == null)
                 {
-                    throw new ArgumentNullException("messageEnqueuedWatcherGetter");
+                    throw new ArgumentNullException(nameof(messageEnqueuedWatcherGetter));
                 }
 
                 _messageEnqueuedWatcherGetter = messageEnqueuedWatcherGetter;

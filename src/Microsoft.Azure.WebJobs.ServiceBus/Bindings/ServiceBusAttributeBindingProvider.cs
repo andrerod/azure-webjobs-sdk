@@ -29,11 +29,11 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (nameResolver == null)
             {
-                throw new ArgumentNullException("nameResolver");
+                throw new ArgumentNullException(nameof(nameResolver));
             }
             if (config == null)
             {
-                throw new ArgumentNullException("config");
+                throw new ArgumentNullException(nameof(config));
             }
 
             _nameResolver = nameResolver;
@@ -44,7 +44,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             ParameterInfo parameter = context.Parameter;
@@ -80,7 +80,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             IEnumerable<string> parameterNames = path.ParameterNames;

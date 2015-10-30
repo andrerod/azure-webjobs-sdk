@@ -13,11 +13,11 @@ namespace Dashboard.Data
         {
             if (eTag == null)
             {
-                throw new ArgumentNullException("eTag");
+                throw new ArgumentNullException(nameof(eTag));
             }
             else if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             // document may be null (valid JSON serialization of text bytes: "null").

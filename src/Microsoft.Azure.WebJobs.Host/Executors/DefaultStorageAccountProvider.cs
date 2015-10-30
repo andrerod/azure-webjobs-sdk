@@ -2,7 +2,6 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Storage;
@@ -50,22 +49,22 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (services == null)
             {
-                throw new ArgumentNullException("services");
+                throw new ArgumentNullException(nameof(services));
             }
 
             if (ambientConnectionStringProvider == null)
             {
-                throw new ArgumentNullException("ambientConnectionStringProvider");
+                throw new ArgumentNullException(nameof(ambientConnectionStringProvider));
             }
 
             if (storageAccountParser == null)
             {
-                throw new ArgumentNullException("storageAccountParser");
+                throw new ArgumentNullException(nameof(storageAccountParser));
             }
 
             if (storageCredentialsValidator == null)
             {
-                throw new ArgumentNullException("storageCredentialsValidator");
+                throw new ArgumentNullException(nameof(storageCredentialsValidator));
             }
 
             _services = services;
@@ -148,6 +147,11 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
                 _storageAccount = value;
                 _storageAccountSet = true;
             }
+        }
+
+        public IStorageAccount GetAccountFromConnectionString(string connectionString)
+        {
+            return _storageAccountParser.ParseAccount(connectionString, "", _services);
         }
 
         public async Task<IStorageAccount> GetAccountAsync(string connectionStringName, CancellationToken cancellationToken)

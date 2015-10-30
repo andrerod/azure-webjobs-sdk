@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Data
         {
             if (parameter == null)
             {
-                throw new ArgumentNullException("parameter");
+                throw new ArgumentNullException(nameof(parameter));
             }
 
             if (parameter.ParameterType != typeof(T))

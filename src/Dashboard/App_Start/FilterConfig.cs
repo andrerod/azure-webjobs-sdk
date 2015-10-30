@@ -12,7 +12,7 @@ namespace Dashboard
         {
             if (filters == null)
             {
-                throw new ArgumentNullException("filters");
+                throw new ArgumentNullException(nameof(filters));
             }
 
             filters.Add(new HandleErrorAttribute());

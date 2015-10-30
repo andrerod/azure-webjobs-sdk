@@ -42,32 +42,32 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Triggers
         {
             if (accountProvider == null)
             {
-                throw new ArgumentNullException("accountProvider");
+                throw new ArgumentNullException(nameof(accountProvider));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (messageEnqueuedWatcherSetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherSetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherSetter));
             }
 
             if (sharedContextProvider == null)
             {
-                throw new ArgumentNullException("sharedContextProvider");
+                throw new ArgumentNullException(nameof(sharedContextProvider));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             _nameResolver = nameResolver;

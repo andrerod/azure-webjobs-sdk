@@ -37,7 +37,7 @@ namespace Dashboard.Data
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             return _store.UpdateOrCreateIfLatest(id, snapshot.HostVersion, otherMetadata: null, document: snapshot);

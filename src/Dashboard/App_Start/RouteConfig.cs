@@ -24,7 +24,7 @@ namespace Dashboard
         {
             if (routes == null)
             {
-                throw new ArgumentNullException("routes");
+                throw new ArgumentNullException(nameof(routes));
             }
 
             RegisterRoutes(routes);
@@ -69,7 +69,7 @@ namespace Dashboard
                 {
                     if (context == null)
                     {
-                        throw new ArgumentNullException("context");
+                        throw new ArgumentNullException(nameof(context));
                     }
 
                     context.Response.Redirect(UrlHelper.GenerateContentUrl(_targetUrl, new HttpContextWrapper(context)));

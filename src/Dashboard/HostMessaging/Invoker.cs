@@ -24,7 +24,7 @@ namespace Dashboard.HostMessaging
         {
             if (function == null)
             {
-                throw new ArgumentNullException("function");
+                throw new ArgumentNullException(nameof(function));
             }
 
             Guid id = Guid.NewGuid();

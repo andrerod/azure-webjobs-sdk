@@ -16,7 +16,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (provider == null)
             {
-                throw new ArgumentNullException("provider");
+                throw new ArgumentNullException(nameof(provider));
             }
 
             return provider.GetAccountAsync(ConnectionStringNames.Dashboard, cancellationToken);
@@ -26,7 +26,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (provider == null)
             {
-                throw new ArgumentNullException("provider");
+                throw new ArgumentNullException(nameof(provider));
             }
 
             return provider.GetAccountAsync(ConnectionStringNames.Storage, cancellationToken);
@@ -36,7 +36,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (provider == null)
             {
-                throw new ArgumentNullException("provider");
+                throw new ArgumentNullException(nameof(provider));
             }
 
             string connectionStringName = GetAccountOverrideOrNull(parameter);

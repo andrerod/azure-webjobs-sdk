@@ -69,7 +69,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (jobType == WebJobTypes.Triggered && runId == null)
             {
-                throw new ArgumentNullException("runId", "runId is required for triggered jobs.");
+                throw new ArgumentNullException(nameof(runId), "runId is required for triggered jobs.");
             }
 
             WebSiteName = websiteName;

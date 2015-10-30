@@ -18,12 +18,12 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             if (converter == null)
             {
-                throw new ArgumentNullException("converter");
+                throw new ArgumentNullException(nameof(converter));
             }
 
             _queue = queue;

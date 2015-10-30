@@ -47,7 +47,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Cancellation
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
             return BindAsync(context.FunctionCancellationToken, context.ValueContext);
         }

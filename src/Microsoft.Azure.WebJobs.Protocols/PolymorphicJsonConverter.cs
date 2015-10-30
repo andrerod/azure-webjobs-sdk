@@ -43,12 +43,12 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (typePropertyName == null)
             {
-                throw new ArgumentNullException("typePropertyName");
+                throw new ArgumentNullException(nameof(typePropertyName));
             }
 
             if (typeMapping == null)
             {
-                throw new ArgumentNullException("typeMapping");
+                throw new ArgumentNullException(nameof(typeMapping));
             }
 
             _typePropertyName = typePropertyName;
@@ -79,7 +79,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (reader == null)
             {
-                throw new ArgumentNullException("reader");
+                throw new ArgumentNullException(nameof(reader));
             }
 
             if (objectType == null)
@@ -89,7 +89,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
 
             if (serializer == null)
             {
-                throw new ArgumentNullException("serializer");
+                throw new ArgumentNullException(nameof(serializer));
             }
 
             if (reader.TokenType == JsonToken.Null)
@@ -111,12 +111,12 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (writer == null)
             {
-                throw new ArgumentNullException("writer");
+                throw new ArgumentNullException(nameof(writer));
             }
 
             if (serializer == null)
             {
-                throw new ArgumentNullException("serializer");
+                throw new ArgumentNullException(nameof(serializer));
             }
 
             if (value == null)

@@ -72,7 +72,7 @@ namespace Microsoft.Azure.WebJobs
         {
             if (serviceProvider == null)
             {
-                throw new ArgumentNullException("serviceProvider");
+                throw new ArgumentNullException(nameof(serviceProvider));
             }
 
             _contextFactory = serviceProvider.GetJobHostContextFactory();
@@ -238,7 +238,7 @@ namespace Microsoft.Azure.WebJobs
         {
             if (method == null)
             {
-                throw new ArgumentNullException("method");
+                throw new ArgumentNullException(nameof(method));
             }
 
             ThrowIfDisposed();
@@ -321,7 +321,7 @@ namespace Microsoft.Azure.WebJobs
         {
             if (configuration == null)
             {
-                throw new ArgumentNullException("configuration");
+                throw new ArgumentNullException(nameof(configuration));
             }
 
             return configuration;

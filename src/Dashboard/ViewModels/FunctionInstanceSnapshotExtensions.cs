@@ -14,7 +14,7 @@ namespace Dashboard.ViewModels
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             DateTimeOffset? endTime = snapshot.EndTime;
@@ -43,7 +43,7 @@ namespace Dashboard.ViewModels
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             if (snapshot.EndTime.HasValue)

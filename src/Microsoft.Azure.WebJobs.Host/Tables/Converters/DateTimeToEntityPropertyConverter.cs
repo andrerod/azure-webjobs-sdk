@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Tables.Converters
         {
             if (input < MinimumValidValue)
             {
-                throw new ArgumentOutOfRangeException("input", "Azure Tables cannot store DateTime values before the " +
+                throw new ArgumentOutOfRangeException(nameof(input), "Azure Tables cannot store DateTime values before the " +
                     "year 1601. Did you mean to use a nullable DateTime?");
             }
         }

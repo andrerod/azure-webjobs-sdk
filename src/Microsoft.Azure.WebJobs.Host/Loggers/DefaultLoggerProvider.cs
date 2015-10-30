@@ -26,11 +26,11 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (storageAccountProvider == null)
             {
-                throw new ArgumentNullException("storageAccountProvider");
+                throw new ArgumentNullException(nameof(storageAccountProvider));
             }
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             _storageAccountProvider = storageAccountProvider;

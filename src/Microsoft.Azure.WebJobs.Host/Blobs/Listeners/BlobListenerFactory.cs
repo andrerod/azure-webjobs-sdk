@@ -47,62 +47,62 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (hostIdProvider == null)
             {
-                throw new ArgumentNullException("hostIdProvider");
+                throw new ArgumentNullException(nameof(hostIdProvider));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (blobWrittenWatcherSetter == null)
             {
-                throw new ArgumentNullException("blobWrittenWatcherSetter");
+                throw new ArgumentNullException(nameof(blobWrittenWatcherSetter));
             }
 
             if (messageEnqueuedWatcherSetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherSetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherSetter));
             }
 
             if (sharedContextProvider == null)
             {
-                throw new ArgumentNullException("sharedContextProvider");
+                throw new ArgumentNullException(nameof(sharedContextProvider));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             if (hostAccount == null)
             {
-                throw new ArgumentNullException("hostAccount");
+                throw new ArgumentNullException(nameof(hostAccount));
             }
 
             if (dataAccount == null)
             {
-                throw new ArgumentNullException("dataAccount");
+                throw new ArgumentNullException(nameof(dataAccount));
             }
 
             if (container == null)
             {
-                throw new ArgumentNullException("container");
+                throw new ArgumentNullException(nameof(container));
             }
 
             if (input == null)
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
 
             if (executor == null)
             {
-                throw new ArgumentNullException("executor");
+                throw new ArgumentNullException(nameof(executor));
             }
 
             _hostIdProvider = hostIdProvider;

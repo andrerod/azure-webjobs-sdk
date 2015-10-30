@@ -33,7 +33,7 @@ namespace Dashboard.Indexers
         {
             if (message == null)
             {
-                throw new ArgumentNullException("message");
+                throw new ArgumentNullException(nameof(message));
             }
 
             string hostId = message.SharedQueueName;

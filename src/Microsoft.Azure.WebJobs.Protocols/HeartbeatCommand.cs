@@ -38,7 +38,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (blob == null)
             {
-                throw new ArgumentNullException("blob");
+                throw new ArgumentNullException(nameof(blob));
             }
 
             _blob = blob;

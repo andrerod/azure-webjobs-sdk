@@ -30,7 +30,7 @@ namespace Dashboard.Data
         {
             if (client == null)
             {
-                throw new ArgumentNullException("client");
+                throw new ArgumentNullException(nameof(client));
             }
 
             IConcurrentMetadataTextStore innerStore = ConcurrentTextStore.CreateBlobStore(client, DashboardContainerNames.Dashboard, string.Empty);

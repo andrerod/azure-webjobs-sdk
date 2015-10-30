@@ -50,7 +50,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (value != null && value.GetType() != _type)
             {
-                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "The supplied value was not of type '{0}'.", _type), "value");
+                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "The supplied value was not of type '{0}'.", _type), nameof(value));
             }
 
             if (Contract == null || value == null)
@@ -83,7 +83,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             if ((type == typeof(object)) ||

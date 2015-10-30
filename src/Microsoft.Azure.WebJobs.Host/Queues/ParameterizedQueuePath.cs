@@ -45,7 +45,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
         {
             if (bindingData == null)
             {
-                throw new ArgumentNullException("bindingData");
+                throw new ArgumentNullException(nameof(bindingData));
             }
 
             IReadOnlyDictionary<string, string> parameters = BindingDataPathHelper.ConvertParameters(bindingData);

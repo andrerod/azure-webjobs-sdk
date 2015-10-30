@@ -22,12 +22,12 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
         {
             if (accountProvider == null)
             {
-                throw new ArgumentNullException("accountProvider");
+                throw new ArgumentNullException(nameof(accountProvider));
             }
 
             if (messageEnqueuedWatcherGetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherGetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherGetter));
             }
 
             _nameResolver = nameResolver;

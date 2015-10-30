@@ -32,7 +32,7 @@ namespace Dashboard.Controllers
         {
             if (self == null)
             {
-                throw new ArgumentNullException("self");
+                throw new ArgumentNullException(nameof(self));
             }
 
             var url = new UrlHelper(self.ViewContext.RequestContext);

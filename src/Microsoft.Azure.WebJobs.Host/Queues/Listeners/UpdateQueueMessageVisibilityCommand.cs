@@ -24,17 +24,17 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Listeners
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             if (message == null)
             {
-                throw new ArgumentNullException("message");
+                throw new ArgumentNullException(nameof(message));
             }
 
             if (speedupStrategy == null)
             {
-                throw new ArgumentNullException("speedupStrategy");
+                throw new ArgumentNullException(nameof(speedupStrategy));
             }
 
             _queue = queue;

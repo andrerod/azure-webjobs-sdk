@@ -83,7 +83,7 @@ namespace Dashboard.Data
         {
             if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             Guid? id = GetMetadataNullableGuid(metadata, IdKey);
@@ -128,7 +128,7 @@ namespace Dashboard.Data
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             var metadata = new Dictionary<string, string>();

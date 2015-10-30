@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Bindings
         {
             if (blobWrittenWatcherGetter == null)
             {
-                throw new ArgumentNullException("blobWrittenWatcherGetter");
+                throw new ArgumentNullException(nameof(blobWrittenWatcherGetter));
             }
 
             _blobWrittenWatcherGetter = blobWrittenWatcherGetter;
@@ -51,7 +51,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Bindings
             {
                 if (blobWrittenWatcherGetter == null)
                 {
-                    throw new ArgumentNullException("blobWrittenWatcherGetter");
+                    throw new ArgumentNullException(nameof(blobWrittenWatcherGetter));
                 }
 
                 _blobWrittenWatcherGetter = blobWrittenWatcherGetter;

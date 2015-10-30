@@ -15,7 +15,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             _queue = queue;

@@ -15,7 +15,7 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
         {
             if (typeLocator == null)
             {
-                throw new ArgumentNullException("typeLocator");
+                throw new ArgumentNullException(nameof(typeLocator));
             }
 
             _typeLocator = typeLocator;

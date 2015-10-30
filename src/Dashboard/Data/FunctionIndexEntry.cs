@@ -69,7 +69,7 @@ namespace Dashboard.Data
         {
             if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             string id = GetMetadataString(metadata, IdKey);
@@ -87,7 +87,7 @@ namespace Dashboard.Data
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             Dictionary<string, string> metadata = new Dictionary<string, string>();

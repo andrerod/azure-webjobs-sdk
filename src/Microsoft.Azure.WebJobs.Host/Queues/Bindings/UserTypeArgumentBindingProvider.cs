@@ -19,7 +19,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
         {
             if (messageEnqueuedWatcherGetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherGetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherGetter));
             }
 
             _messageEnqueuedWatcherGetter = messageEnqueuedWatcherGetter;
@@ -62,7 +62,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
             {
                 if (messageEnqueuedWatcherGetter == null)
                 {
-                    throw new ArgumentNullException("messageEnqueuedWatcherGetter");
+                    throw new ArgumentNullException(nameof(messageEnqueuedWatcherGetter));
                 }
 
                 _messageEnqueuedWatcherGetter = messageEnqueuedWatcherGetter;
@@ -77,7 +77,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
             {
                 if (context == null)
                 {
-                    throw new ArgumentNullException("context");
+                    throw new ArgumentNullException(nameof(context));
                 }
 
                 IConverter<TInput, IStorageQueueMessage> converter =

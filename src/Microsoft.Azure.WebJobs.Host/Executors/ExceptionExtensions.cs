@@ -14,7 +14,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             // Additional details are only available on StorageException.

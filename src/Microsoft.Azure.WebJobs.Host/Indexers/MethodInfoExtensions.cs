@@ -13,7 +13,7 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
         {
             if (methodInfo == null)
             {
-                throw new ArgumentNullException("methodInfo");
+                throw new ArgumentNullException(nameof(methodInfo));
             }
 
             return String.Format(CultureInfo.InvariantCulture, "{0}.{1}", methodInfo.DeclaringType.FullName, methodInfo.Name);
@@ -23,7 +23,7 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
         {
             if (methodInfo == null)
             {
-                throw new ArgumentNullException("methodInfo");
+                throw new ArgumentNullException(nameof(methodInfo));
             }
 
             return String.Format(CultureInfo.InvariantCulture, "{0}.{1}", methodInfo.DeclaringType.Name, methodInfo.Name);

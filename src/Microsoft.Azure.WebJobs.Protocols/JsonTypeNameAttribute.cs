@@ -27,7 +27,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (typeName == null)
             {
-                throw new ArgumentNullException("typeName");
+                throw new ArgumentNullException(nameof(typeName));
             }
 
             _typeName = typeName;

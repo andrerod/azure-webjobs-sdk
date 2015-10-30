@@ -24,7 +24,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (message == null)
             {
-                throw new ArgumentNullException("message");
+                throw new ArgumentNullException(nameof(message));
             }
 
             ExecutionReason reason = message.Reason;

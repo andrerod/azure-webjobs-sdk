@@ -18,7 +18,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             ValidateContractCompatibility(path.ParameterNames, bindingDataContract);
@@ -34,7 +34,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (bindingTemplate == null)
             {
-                throw new ArgumentNullException("bindingTemplate");
+                throw new ArgumentNullException(nameof(bindingTemplate));
             }
 
             ValidateContractCompatibility(bindingTemplate.ParameterNames, bindingDataContract);
@@ -50,7 +50,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (bindingTemplate == null)
             {
-                throw new ArgumentNullException("bindingTemplate");
+                throw new ArgumentNullException(nameof(bindingTemplate));
             }
 
             if (bindingData == null ||

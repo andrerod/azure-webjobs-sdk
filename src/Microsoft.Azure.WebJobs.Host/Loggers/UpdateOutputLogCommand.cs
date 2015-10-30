@@ -65,11 +65,11 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (outputBlob == null)
             {
-                throw new ArgumentNullException("outputBlob");
+                throw new ArgumentNullException(nameof(outputBlob));
             }
             else if (uploadCommand == null)
             {
-                throw new ArgumentNullException("uploadCommand");
+                throw new ArgumentNullException(nameof(uploadCommand));
             }
 
             StringWriter innerWriter = new StringWriter();

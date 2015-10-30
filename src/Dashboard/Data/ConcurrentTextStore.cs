@@ -14,7 +14,7 @@ namespace Dashboard.Data
         {
             if (client == null)
             {
-                throw new ArgumentNullException("client");
+                throw new ArgumentNullException(nameof(client));
             }
 
             CloudBlobContainer container = client.GetContainerReference(containerName);

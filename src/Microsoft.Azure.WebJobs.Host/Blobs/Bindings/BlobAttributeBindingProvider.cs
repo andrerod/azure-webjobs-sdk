@@ -29,17 +29,17 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Bindings
         {
             if (accountProvider == null)
             {
-                throw new ArgumentNullException("accountProvider");
+                throw new ArgumentNullException(nameof(accountProvider));
             }
 
             if (extensionTypeLocator == null)
             {
-                throw new ArgumentNullException("extensionTypeLocator");
+                throw new ArgumentNullException(nameof(extensionTypeLocator));
             }
 
             if (blobWrittenWatcherGetter == null)
             {
-                throw new ArgumentNullException("blobWrittenWatcherGetter");
+                throw new ArgumentNullException(nameof(blobWrittenWatcherGetter));
             }
 
             _nameResolver = nameResolver;
@@ -60,7 +60,16 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Bindings
 
             string resolvedPath = Resolve(blobAttribute.BlobPath);
             IBindableBlobPath path = null;
-            IStorageAccount account = await _accountProvider.GetStorageAccountAsync(context.Parameter, context.CancellationToken);
+            IStorageAccount account;
+            if (context.StorageAccount == null)
+            {
+                account = await _accountProvider.GetStorageAccountAsync(context.Parameter, context.CancellationToken);
+            }
+            else
+            {
+                account = context.StorageAccount;
+            }
+
             StorageClientFactoryContext clientFactoryContext = new StorageClientFactoryContext
             {
                 Parameter = context.Parameter

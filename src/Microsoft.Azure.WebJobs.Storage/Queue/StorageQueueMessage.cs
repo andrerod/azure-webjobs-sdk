@@ -26,7 +26,7 @@ namespace Microsoft.Azure.WebJobs.Host.Storage.Queue
         {
             if (message == null)
             {
-                throw new ArgumentNullException("message");
+                throw new ArgumentNullException(nameof(message));
             }
 
             _sdk = message;

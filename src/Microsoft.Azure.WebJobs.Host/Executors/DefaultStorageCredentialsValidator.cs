@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (account == null)
             {
-                throw new ArgumentNullException("account");
+                throw new ArgumentNullException(nameof(account));
             }
 
             StorageCredentials credentials = account.Credentials;

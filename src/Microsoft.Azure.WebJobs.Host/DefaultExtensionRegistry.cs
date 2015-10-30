@@ -16,15 +16,15 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
             if (instance == null)
             {
-                throw new ArgumentNullException("instance");
+                throw new ArgumentNullException(nameof(instance));
             }
             if (!type.IsAssignableFrom(instance.GetType()))
             {
-                throw new ArgumentOutOfRangeException("instance");
+                throw new ArgumentOutOfRangeException(nameof(instance));
             }
 
             ConcurrentBag<object> instances = _registry.GetOrAdd(type, (t) => new ConcurrentBag<object>());
@@ -35,7 +35,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             ConcurrentBag<object> instances = null;

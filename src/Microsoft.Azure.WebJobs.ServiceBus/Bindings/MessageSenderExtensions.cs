@@ -18,11 +18,11 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
         {
             if (sender == null)
             {
-                throw new ArgumentNullException("sender");
+                throw new ArgumentNullException(nameof(sender));
             }
             else if (namespaceManager == null)
             {
-                throw new ArgumentNullException("namespaceManager");
+                throw new ArgumentNullException(nameof(namespaceManager));
             }
 
             ServiceBusCausalityHelper.EncodePayload(functionInstanceId, message);

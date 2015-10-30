@@ -23,7 +23,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (serviceProvider == null)
             {
-                throw new ArgumentNullException("serviceProvider");
+                throw new ArgumentNullException(nameof(serviceProvider));
             }
 
             object service = serviceProvider.GetService(typeof(T));

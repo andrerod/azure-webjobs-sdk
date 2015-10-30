@@ -30,7 +30,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs
         {
             if (containerName == null)
             {
-                throw new ArgumentNullException("containerName");
+                throw new ArgumentNullException(nameof(containerName));
             }
 
             if (!IsValidContainerName(containerName))

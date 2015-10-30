@@ -39,7 +39,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             if (_incomplete)
@@ -57,7 +57,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             bool incomplete = metadata.ContainsKey(IncompleteKey);

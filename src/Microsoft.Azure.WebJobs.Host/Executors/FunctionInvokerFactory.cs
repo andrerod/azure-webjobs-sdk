@@ -15,12 +15,12 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (method == null)
             {
-                throw new ArgumentNullException("method");
+                throw new ArgumentNullException(nameof(method));
             }
 
             if (activator == null)
             {
-                throw new ArgumentNullException("activator");
+                throw new ArgumentNullException(nameof(activator));
             }
 
             Type reflectedType = method.ReflectedType;

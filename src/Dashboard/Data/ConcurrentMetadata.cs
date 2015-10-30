@@ -12,15 +12,15 @@ namespace Dashboard.Data
         {
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
             else if (eTag == null)
             {
-                throw new ArgumentNullException("eTag");
+                throw new ArgumentNullException(nameof(eTag));
             }
             else if (metadata == null)
             {
-                throw new ArgumentNullException("metadata");
+                throw new ArgumentNullException(nameof(metadata));
             }
 
             Id = id;

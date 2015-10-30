@@ -36,7 +36,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (info == null)
             {
-                throw new ArgumentNullException("info");
+                throw new ArgumentNullException(nameof(info));
             }
 
             InstanceId = Guid.Parse(info.GetString("InstanceId"));
@@ -73,7 +73,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (info == null)
             {
-                throw new ArgumentNullException("info");
+                throw new ArgumentNullException(nameof(info));
             }
 
             info.AddValue("InstanceId", this.InstanceId);

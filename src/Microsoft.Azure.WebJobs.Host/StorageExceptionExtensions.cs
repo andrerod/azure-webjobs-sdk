@@ -12,7 +12,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
             RequestResult result = exception.RequestInformation;

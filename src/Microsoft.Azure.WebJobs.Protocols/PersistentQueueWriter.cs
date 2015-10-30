@@ -69,7 +69,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
             {
                 if (String.IsNullOrEmpty(messageId))
                 {
-                    throw new ArgumentNullException("messageId");
+                    throw new ArgumentNullException(nameof(messageId));
                 }
 
                 IStorageBlockBlob blob = _blobContainer.GetBlockBlobReference(messageId);

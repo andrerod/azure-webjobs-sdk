@@ -12,7 +12,7 @@ namespace Microsoft.Azure.WebJobs.Host.Tables
         {
             if (property == null)
             {
-                throw new ArgumentNullException("property");
+                throw new ArgumentNullException(nameof(property));
             }
 
             return property.GetGetMethod() != null;
@@ -22,7 +22,7 @@ namespace Microsoft.Azure.WebJobs.Host.Tables
         {
             if (property == null)
             {
-                throw new ArgumentNullException("property");
+                throw new ArgumentNullException(nameof(property));
             }
 
             return property.GetSetMethod() != null;

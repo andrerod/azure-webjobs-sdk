@@ -13,7 +13,7 @@ namespace Dashboard.HostMessaging
         {
             if (functionInstanceArgument == null)
             {
-                throw new ArgumentNullException("functionInstanceArgument");
+                throw new ArgumentNullException(nameof(functionInstanceArgument));
             }
 
             string storageAccountName = functionInstanceArgument.AccountName;

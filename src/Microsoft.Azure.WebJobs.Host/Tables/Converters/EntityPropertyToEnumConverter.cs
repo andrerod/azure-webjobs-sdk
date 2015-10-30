@@ -23,7 +23,7 @@ namespace Microsoft.Azure.WebJobs.Host.Tables.Converters
         {
             if (input == null)
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
 
             string unparsed = input.StringValue;

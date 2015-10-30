@@ -27,11 +27,11 @@ namespace Microsoft.Azure.WebJobs.Host.Storage
         {
             if (sdkAccount == null)
             {
-                throw new ArgumentNullException("sdkAccount");
+                throw new ArgumentNullException(nameof(sdkAccount));
             }
             if (services == null)
             {
-                throw new ArgumentNullException("services");
+                throw new ArgumentNullException(nameof(services));
             }
 
             _sdkAccount = sdkAccount;

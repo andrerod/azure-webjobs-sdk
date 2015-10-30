@@ -35,7 +35,7 @@
     <DocumentationFile>bin\Release\Microsoft.Azure.WebJobs.Storage.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <DelaySign>true</DelaySign>

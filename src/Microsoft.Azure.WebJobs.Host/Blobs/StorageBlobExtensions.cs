@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs
         {
             if (blob == null)
             {
-                throw new ArgumentNullException("blob");
+                throw new ArgumentNullException(nameof(blob));
             }
 
             return new BlobPath(blob.Container.Name, blob.Name);
@@ -32,7 +32,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs
         {
             if (blob == null)
             {
-                throw new ArgumentNullException("blob");
+                throw new ArgumentNullException(nameof(blob));
             }
 
             try

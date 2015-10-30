@@ -32,7 +32,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
 
             if (!IsValidQueueName(name, out errorMessage))
             {
-                throw new ArgumentException(errorMessage, "name");
+                throw new ArgumentException(errorMessage, nameof(name));
             }
         }
 

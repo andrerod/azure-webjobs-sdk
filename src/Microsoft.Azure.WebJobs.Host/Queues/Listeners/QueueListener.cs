@@ -46,12 +46,12 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Listeners
         {
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (queueConfiguration.BatchSize <= 0)

@@ -69,7 +69,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
             {
                 if (context == null)
                 {
-                    throw new ArgumentNullException("context");
+                    throw new ArgumentNullException(nameof(context));
                 }
 
                 ICollector<TItem> collector = new MessageSenderCollector<TItem>(value, _converter,

@@ -14,7 +14,7 @@ namespace Microsoft.Azure.WebJobs.Host.Timers
         {
             if (delayInterval.Ticks < 0)
             {
-                throw new ArgumentOutOfRangeException("delayInterval", "The TimeSpan must not be negative.");
+                throw new ArgumentOutOfRangeException(nameof(delayInterval), "The TimeSpan must not be negative.");
             }
 
             _delayInterval = delayInterval;

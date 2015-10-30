@@ -29,11 +29,11 @@ namespace Dashboard
         {
             if (argument == null)
             {
-                throw new ArgumentNullException("argument");
+                throw new ArgumentNullException(nameof(argument));
             }
             if (parameterModels == null)
             {
-                throw new ArgumentNullException("parameterModels");
+                throw new ArgumentNullException(nameof(parameterModels));
             }
 
             ParameterModel model = new ParameterModel

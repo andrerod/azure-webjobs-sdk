@@ -69,7 +69,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Bindings
             {
                 if (context == null)
                 {
-                    throw new ArgumentNullException("context");
+                    throw new ArgumentNullException(nameof(context));
                 }
 
                 IConverter<TItem, IStorageQueueMessage> converter = _converterFactory.Create(value,

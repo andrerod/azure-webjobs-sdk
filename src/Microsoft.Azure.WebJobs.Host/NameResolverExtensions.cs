@@ -20,7 +20,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (resolver == null)
             {
-                throw new ArgumentNullException("resolver");
+                throw new ArgumentNullException(nameof(resolver));
             }
 
             if (resolve == null)

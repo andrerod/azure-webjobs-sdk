@@ -14,12 +14,12 @@ namespace Dashboard.Data
         {
             if (containerName == null)
             {
-                throw new ArgumentNullException("containerName");
+                throw new ArgumentNullException(nameof(containerName));
             }
 
             if (blobName == null)
             {
-                throw new ArgumentNullException("blobName");
+                throw new ArgumentNullException(nameof(blobName));
             }
 
             _containerName = containerName;

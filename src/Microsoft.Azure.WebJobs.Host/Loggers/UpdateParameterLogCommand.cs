@@ -26,15 +26,15 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (parameterLogBlob == null)
             {
-                throw new ArgumentNullException("parameterLogBlob");
+                throw new ArgumentNullException(nameof(parameterLogBlob));
             }
             else if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
             else if (watches == null)
             {
-                throw new ArgumentNullException("watches");
+                throw new ArgumentNullException(nameof(watches));
             }
 
             _parameterLogBlob = parameterLogBlob;

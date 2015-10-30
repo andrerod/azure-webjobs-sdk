@@ -17,12 +17,12 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Runtime
         {
             if (bindingProvider == null)
             {
-                throw new ArgumentNullException("bindingProvider");
+                throw new ArgumentNullException(nameof(bindingProvider));
             }
 
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             _bindingProvider = bindingProvider;

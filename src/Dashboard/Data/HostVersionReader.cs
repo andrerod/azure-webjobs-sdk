@@ -36,7 +36,7 @@ namespace Dashboard.Data
         {
             if (directory == null)
             {
-                throw new ArgumentNullException("directory");
+                throw new ArgumentNullException(nameof(directory));
             }
 
             _directory = directory;

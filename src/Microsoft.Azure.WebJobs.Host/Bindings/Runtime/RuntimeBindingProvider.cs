@@ -15,7 +15,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Runtime
         {
             if (bindingProviderGetter == null)
             {
-                throw new ArgumentNullException("bindingProviderGetter");
+                throw new ArgumentNullException(nameof(bindingProviderGetter));
             }
 
             _bindingProviderGetter = bindingProviderGetter;
@@ -25,7 +25,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Runtime
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             ParameterInfo parameter = context.Parameter;

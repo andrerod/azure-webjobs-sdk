@@ -40,37 +40,37 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Triggers
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             if (argumentBinding == null)
             {
-                throw new ArgumentNullException("argumentBinding");
+                throw new ArgumentNullException(nameof(argumentBinding));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (messageEnqueuedWatcherSetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherSetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherSetter));
             }
 
             if (sharedContextProvider == null)
             {
-                throw new ArgumentNullException("sharedContextProvider");
+                throw new ArgumentNullException(nameof(sharedContextProvider));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             _parameterName = parameterName;
@@ -153,7 +153,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Triggers
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             var factory = new QueueListenerFactory(_queue, _queueConfiguration, _backgroundExceptionDispatcher, 

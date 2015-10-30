@@ -23,7 +23,7 @@ namespace Dashboard.Filters
         {
             if (filterContext == null)
             {
-                throw new ArgumentNullException("filterContext");
+                throw new ArgumentNullException(nameof(filterContext));
             }
 
             filterContext.Controller.ViewBag.DashboardHasSetupError = _context.HasSetupError;

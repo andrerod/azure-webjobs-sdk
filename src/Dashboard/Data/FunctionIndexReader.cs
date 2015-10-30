@@ -30,15 +30,15 @@ namespace Dashboard.Data
         {
             if (functionsDirectory == null)
             {
-                throw new ArgumentNullException("functionsDirectory");
+                throw new ArgumentNullException(nameof(functionsDirectory));
             }
             else if (versionDirectory == null)
             {
-                throw new ArgumentNullException("versionDirectory");
+                throw new ArgumentNullException(nameof(versionDirectory));
             }
             else if (versionMapper == null)
             {
-                throw new ArgumentNullException("versionMapper");
+                throw new ArgumentNullException(nameof(versionMapper));
             }
 
             _functionsContainer = functionsDirectory.Container;

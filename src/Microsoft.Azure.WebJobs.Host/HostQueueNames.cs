@@ -35,7 +35,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (string.IsNullOrEmpty(queueName))
             {
-                throw new ArgumentNullException("queueName");
+                throw new ArgumentNullException(nameof(queueName));
             }
 
             return queueName.StartsWith(Prefix, StringComparison.OrdinalIgnoreCase) ||

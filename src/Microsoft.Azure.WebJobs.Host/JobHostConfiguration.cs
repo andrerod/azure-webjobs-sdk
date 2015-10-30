@@ -95,7 +95,7 @@ namespace Microsoft.Azure.WebJobs
             {
                 if (value != null && !HostIdValidator.IsValid(value))
                 {
-                    throw new ArgumentException(HostIdValidator.ValidationMessage, "value");
+                    throw new ArgumentException(HostIdValidator.ValidationMessage, nameof(value));
                 }
 
                 _hostId = value;
@@ -114,7 +114,7 @@ namespace Microsoft.Azure.WebJobs
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 AddService<IJobActivator>(value);
             }
@@ -180,7 +180,7 @@ namespace Microsoft.Azure.WebJobs
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 AddService<ITypeLocator>(value);
             }
@@ -199,7 +199,7 @@ namespace Microsoft.Azure.WebJobs
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 AddService<INameResolver>(value);
             }
@@ -261,7 +261,7 @@ namespace Microsoft.Azure.WebJobs
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 AddService<StorageClientFactory>(value);
             }
@@ -276,7 +276,7 @@ namespace Microsoft.Azure.WebJobs
         {
             if (serviceType == null)
             {
-                throw new ArgumentNullException("serviceType");
+                throw new ArgumentNullException(nameof(serviceType));
             }
 
             object service = null;
@@ -311,11 +311,11 @@ namespace Microsoft.Azure.WebJobs
         {
             if (serviceType == null)
             {
-                throw new ArgumentNullException("serviceType");
+                throw new ArgumentNullException(nameof(serviceType));
             }
             if (!serviceType.IsAssignableFrom(serviceInstance.GetType()))
             {
-                throw new ArgumentOutOfRangeException("serviceInstance");
+                throw new ArgumentOutOfRangeException(nameof(serviceInstance));
             }
 
             _services.AddOrUpdate(serviceType, serviceInstance, (key, existingValue) =>

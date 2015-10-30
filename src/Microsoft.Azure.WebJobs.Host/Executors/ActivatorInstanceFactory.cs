@@ -13,7 +13,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (activator == null)
             {
-                throw new ArgumentNullException("activator");
+                throw new ArgumentNullException(nameof(activator));
             }
 
             _activator = activator;

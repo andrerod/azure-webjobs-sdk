@@ -26,17 +26,17 @@ namespace Microsoft.Azure.WebJobs.Host.Timers
         {
             if (command == null)
             {
-                throw new ArgumentNullException("command");
+                throw new ArgumentNullException(nameof(command));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (initialWait == null)
             {
-                throw new ArgumentNullException("initialWait");
+                throw new ArgumentNullException(nameof(initialWait));
             }
 
             _command = command;

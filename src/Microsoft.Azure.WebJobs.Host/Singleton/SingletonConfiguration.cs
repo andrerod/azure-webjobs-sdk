@@ -80,7 +80,7 @@ namespace Microsoft.Azure.WebJobs.Host
             {
                 if (value <= TimeSpan.Zero)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
                 _lockAcquisitionTimeout = value;
             }
@@ -101,7 +101,7 @@ namespace Microsoft.Azure.WebJobs.Host
             {
                 if (value < TimeSpan.FromMilliseconds(500))
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
                 _lockAcquisitionPollingInterval = value;
             }
@@ -129,7 +129,7 @@ namespace Microsoft.Azure.WebJobs.Host
                 if (value != Timeout.InfiniteTimeSpan &&
                     value < MinimumLeasePeriod)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
                 _listenerLockRecoveryPollingInterval = value;
             }
@@ -140,7 +140,7 @@ namespace Microsoft.Azure.WebJobs.Host
             if (value < MinimumLeasePeriod ||
                 value > MaximumLeasePeriod)
             {
-                throw new ArgumentOutOfRangeException("value");
+                throw new ArgumentOutOfRangeException(nameof(value));
             }
         }
     }

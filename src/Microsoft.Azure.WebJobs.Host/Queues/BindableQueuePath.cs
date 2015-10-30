@@ -24,7 +24,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues
         {
             if (queueNamePattern == null)
             {
-                throw new ArgumentNullException("queueNamePattern");
+                throw new ArgumentNullException(nameof(queueNamePattern));
             }
 
             BindingTemplate template = BindingTemplate.FromString(queueNamePattern);

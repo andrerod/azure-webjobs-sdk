@@ -16,7 +16,7 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (queueWriter == null)
             {
-                throw new ArgumentNullException("queueWriter");
+                throw new ArgumentNullException(nameof(queueWriter));
             }
 
             _queueWriter = queueWriter;
@@ -36,7 +36,7 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (message == null)
             {
-                throw new ArgumentNullException("message");
+                throw new ArgumentNullException(nameof(message));
             }
 
             return _queueWriter.EnqueueAsync(message, cancellationToken);
@@ -46,7 +46,7 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (String.IsNullOrEmpty(startedMessageId))
             {
-                throw new ArgumentNullException("startedMessageId");
+                throw new ArgumentNullException(nameof(startedMessageId));
             }
 
             return _queueWriter.DeleteAsync(startedMessageId, cancellationToken);

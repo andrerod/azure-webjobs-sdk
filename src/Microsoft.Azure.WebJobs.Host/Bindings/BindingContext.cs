@@ -28,7 +28,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (valueContext == null)
             {
-                throw new ArgumentNullException("valueContext");
+                throw new ArgumentNullException(nameof(valueContext));
             }
 
             _valueContext = valueContext;
@@ -41,7 +41,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (ambientContext == null)
             {
-                throw new ArgumentNullException("ambientContext");
+                throw new ArgumentNullException(nameof(ambientContext));
             }
 
             _ambientContext = ambientContext;

@@ -15,7 +15,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Data
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             IReadOnlyDictionary<string, Type> bindingDataContract = context.BindingDataContract;

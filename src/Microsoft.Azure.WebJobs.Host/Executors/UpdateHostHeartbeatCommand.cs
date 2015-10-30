@@ -18,7 +18,7 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (heartbeatCommand == null)
             {
-                throw new ArgumentNullException("heartbeatCommand");
+                throw new ArgumentNullException(nameof(heartbeatCommand));
             }
 
             _heartbeatCommand = heartbeatCommand;

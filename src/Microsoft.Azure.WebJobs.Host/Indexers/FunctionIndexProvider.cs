@@ -14,6 +14,7 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
 {
     internal class FunctionIndexProvider : IFunctionIndexProvider
     {
+        private readonly IStorageAccountProvider _storageAccountProvider;
         private readonly ITypeLocator _typeLocator;
         private readonly ITriggerBindingProvider _triggerBindingProvider;
         private readonly IBindingProvider _bindingProvider;
@@ -24,7 +25,9 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
 
         private IFunctionIndex _index;
 
-        public FunctionIndexProvider(ITypeLocator typeLocator,
+        public FunctionIndexProvider(
+            IStorageAccountProvider storageAccountProvider,
+            ITypeLocator typeLocator,
             ITriggerBindingProvider triggerBindingProvider,
             IBindingProvider bindingProvider,
             IJobActivator activator,
@@ -32,41 +35,47 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
             IExtensionRegistry extensions,
             SingletonManager singletonManager)
         {
+            if (storageAccountProvider == null)
+            {
+                throw new ArgumentNullException(nameof(storageAccountProvider));
+            }
+
             if (typeLocator == null)
             {
-                throw new ArgumentNullException("typeLocator");
+                throw new ArgumentNullException(nameof(typeLocator));
             }
 
             if (triggerBindingProvider == null)
             {
-                throw new ArgumentNullException("triggerBindingProvider");
+                throw new ArgumentNullException(nameof(triggerBindingProvider));
             }
 
             if (bindingProvider == null)
             {
-                throw new ArgumentNullException("bindingProvider");
+                throw new ArgumentNullException(nameof(bindingProvider));
             }
 
             if (activator == null)
             {
-                throw new ArgumentNullException("activator");
+                throw new ArgumentNullException(nameof(activator));
             }
 
             if (executor == null)
             {
-                throw new ArgumentNullException("executor");
+                throw new ArgumentNullException(nameof(executor));
             }
 
             if (extensions == null)
             {
-                throw new ArgumentNullException("extensions");
+                throw new ArgumentNullException(nameof(extensions));
             }
 
             if (singletonManager == null)
             {
-                throw new ArgumentNullException("singletonManager");
+                throw new ArgumentNullException(nameof(singletonManager));
             }
 
+            _storageAccountProvider = storageAccountProvider;
             _typeLocator = typeLocator;
             _triggerBindingProvider = triggerBindingProvider;
             _bindingProvider = bindingProvider;
@@ -89,7 +98,15 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
         private async Task<IFunctionIndex> CreateAsync(CancellationToken cancellationToken)
         {
             FunctionIndex index = new FunctionIndex();
-            FunctionIndexer indexer = new FunctionIndexer(_triggerBindingProvider, _bindingProvider, _activator, _executor, _extensions, _singletonManager);
+            FunctionIndexer indexer = new FunctionIndexer(
+                _storageAccountProvider,
+                _triggerBindingProvider,
+                _bindingProvider,
+                _activator,
+                _executor,
+                _extensions,
+                _singletonManager);
+
             IReadOnlyList<Type> types = _typeLocator.GetTypes();
 
             foreach (Type type in types)

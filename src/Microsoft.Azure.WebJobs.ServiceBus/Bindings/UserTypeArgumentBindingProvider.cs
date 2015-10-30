@@ -51,7 +51,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Bindings
             {
                 if (context == null)
                 {
-                    throw new ArgumentNullException("context");
+                    throw new ArgumentNullException(nameof(context));
                 }
 
                 IConverter<TInput, BrokeredMessage> converter = new UserTypeToBrokeredMessageConverter<TInput>();

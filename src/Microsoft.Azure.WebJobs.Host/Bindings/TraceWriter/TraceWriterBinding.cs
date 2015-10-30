@@ -41,7 +41,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             object tracer = null;

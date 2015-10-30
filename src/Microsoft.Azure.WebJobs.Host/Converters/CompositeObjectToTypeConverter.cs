@@ -22,7 +22,7 @@ namespace Microsoft.Azure.WebJobs.Host.Converters
         {
             if (converters == null)
             {
-                throw new ArgumentNullException("converters");
+                throw new ArgumentNullException(nameof(converters));
             }
             _converters = converters;
         }

@@ -89,7 +89,7 @@ namespace Microsoft.Azure.WebJobs.Host.Protocols
         {
             if (json == null)
             {
-                throw new ArgumentNullException("json");
+                throw new ArgumentNullException(nameof(json));
             }
 
             StringReader stringReader = null;

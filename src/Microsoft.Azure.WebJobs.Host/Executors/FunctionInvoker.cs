@@ -18,17 +18,17 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (parameterNames == null)
             {
-                throw new ArgumentNullException("parameterNames");
+                throw new ArgumentNullException(nameof(parameterNames));
             }
 
             if (instanceFactory == null)
             {
-                throw new ArgumentNullException("instanceFactory");
+                throw new ArgumentNullException(nameof(instanceFactory));
             }
 
             if (methodInvoker == null)
             {
-                throw new ArgumentNullException("methodInvoker");
+                throw new ArgumentNullException(nameof(methodInvoker));
             }
 
             _parameterNames = parameterNames;

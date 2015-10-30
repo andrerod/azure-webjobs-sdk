@@ -14,7 +14,7 @@ namespace Dashboard.Data
         {
             if (blob == null)
             {
-                throw new ArgumentNullException("blob");
+                throw new ArgumentNullException(nameof(blob));
             }
 
             try

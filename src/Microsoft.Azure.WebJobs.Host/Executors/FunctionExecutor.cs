@@ -33,22 +33,22 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (functionInstanceLogger == null)
             {
-                throw new ArgumentNullException("functionInstanceLogger");
+                throw new ArgumentNullException(nameof(functionInstanceLogger));
             }
 
             if (functionOutputLogger == null)
             {
-                throw new ArgumentNullException("functionOutputLogger");
+                throw new ArgumentNullException(nameof(functionOutputLogger));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             _functionInstanceLogger = functionInstanceLogger;

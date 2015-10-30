@@ -26,12 +26,12 @@ namespace Microsoft.Azure.WebJobs.Host.Executors
         {
             if (storageAccountProvider == null)
             {
-                throw new ArgumentNullException("storageAccountProvider");
+                throw new ArgumentNullException(nameof(storageAccountProvider));
             }
 
             if (getFunctionIndexProvider == null)
             {
-                throw new ArgumentNullException("getFunctionIndexProvider");
+                throw new ArgumentNullException(nameof(getFunctionIndexProvider));
             }
 
             _storageAccountProvider = storageAccountProvider;

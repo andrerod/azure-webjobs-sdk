@@ -14,7 +14,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Listeners
         {
             if (messageEnqueuedWatcherSetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherSetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherSetter));
             }
 
             _messageEnqueuedWatcherSetter = messageEnqueuedWatcherSetter;

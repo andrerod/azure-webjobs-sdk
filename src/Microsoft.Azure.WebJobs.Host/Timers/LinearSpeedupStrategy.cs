@@ -23,23 +23,23 @@ namespace Microsoft.Azure.WebJobs.Host.Timers
         {
             if (normalInterval.Ticks < 0)
             {
-                throw new ArgumentOutOfRangeException("normalInterval", "The TimeSpan must not be negative.");
+                throw new ArgumentOutOfRangeException(nameof(normalInterval), "The TimeSpan must not be negative.");
             }
 
             if (minimumInterval.Ticks < 0)
             {
-                throw new ArgumentOutOfRangeException("minimumInterval", "The TimeSpan must not be negative.");
+                throw new ArgumentOutOfRangeException(nameof(minimumInterval), "The TimeSpan must not be negative.");
             }
 
             if (minimumInterval.Ticks > normalInterval.Ticks)
             {
                 throw new ArgumentException("The minimumInterval must not be greater than the normalInterval.",
-                    "minimumInterval");
+                    nameof(minimumInterval));
             }
 
             if (failureSpeedupDivisor < 1)
             {
-                throw new ArgumentOutOfRangeException("failureSpeedupDivisor",
+                throw new ArgumentOutOfRangeException(nameof(failureSpeedupDivisor),
                     "The failureSpeedupDivisor must not be less than 1.");
             }
 

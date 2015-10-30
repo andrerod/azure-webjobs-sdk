@@ -21,7 +21,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings
         {
             if (bindingData == null)
             {
-                throw new ArgumentNullException("bindingData");
+                throw new ArgumentNullException(nameof(bindingData));
             }
 
             Dictionary<string, string> parameters = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);

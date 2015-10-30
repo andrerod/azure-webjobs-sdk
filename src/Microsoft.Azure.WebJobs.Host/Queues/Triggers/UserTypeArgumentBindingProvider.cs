@@ -49,7 +49,7 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Triggers
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
 
                 object convertedValue;

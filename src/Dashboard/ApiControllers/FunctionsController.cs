@@ -390,7 +390,7 @@ namespace Dashboard.ApiControllers
         {
             if (pagingInfo == null)
             {
-                throw new ArgumentNullException("pagingInfo");
+                throw new ArgumentNullException(nameof(pagingInfo));
             }
 
             if (!ModelState.IsValid)

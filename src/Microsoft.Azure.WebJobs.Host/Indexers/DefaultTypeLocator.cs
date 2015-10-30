@@ -21,11 +21,11 @@ namespace Microsoft.Azure.WebJobs.Host.Indexers
         {
             if (log == null)
             {
-                throw new ArgumentNullException("log");
+                throw new ArgumentNullException(nameof(log));
             }
             if (extensions == null)
             {
-                throw new ArgumentNullException("extensions");
+                throw new ArgumentNullException(nameof(extensions));
             }
 
             _log = log;

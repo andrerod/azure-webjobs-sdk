@@ -22,15 +22,15 @@ namespace Dashboard.ApiControllers
         {
             if (indexerLogReader == null)
             {
-                throw new ArgumentNullException("indexerLogReader");
+                throw new ArgumentNullException(nameof(indexerLogReader));
             }
             if (queueReader == null)
             {
-                throw new ArgumentNullException("queueReader");
+                throw new ArgumentNullException(nameof(queueReader));
             }
             if (dashboardVersionManager == null)
             {
-                throw new ArgumentNullException("dashboardVersionManager");
+                throw new ArgumentNullException(nameof(dashboardVersionManager));
             }
 
             _indexerLogReader = indexerLogReader;

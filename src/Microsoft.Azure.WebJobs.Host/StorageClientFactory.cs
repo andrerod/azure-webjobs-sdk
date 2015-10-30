@@ -28,7 +28,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
             return context.Account.CreateCloudBlobClient();
         }
@@ -42,7 +42,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
             return context.Account.CreateCloudTableClient();
         }
@@ -56,7 +56,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
             return context.Account.CreateCloudQueueClient();
         }

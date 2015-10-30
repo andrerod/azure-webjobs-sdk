@@ -24,12 +24,12 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Path
         {
             if (pattern == null)
             {
-                throw new ArgumentNullException("pattern");
+                throw new ArgumentNullException(nameof(pattern));
             }
 
             if (tokens == null)
             {
-                throw new ArgumentNullException("tokens");
+                throw new ArgumentNullException(nameof(tokens));
             }
 
             _pattern = pattern;

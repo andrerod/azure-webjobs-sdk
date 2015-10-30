@@ -34,7 +34,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Bindings
             {
                 if (container == null)
                 {
-                    throw new ArgumentNullException("container");
+                    throw new ArgumentNullException(nameof(container));
                 }
 
                 BlobValueBindingContext blobValueBindingContext = (BlobValueBindingContext)context;

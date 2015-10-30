@@ -4,6 +4,7 @@
 using System;
 using System.Reflection;
 using System.Threading;
+using Microsoft.Azure.WebJobs.Host.Storage;
 
 namespace Microsoft.Azure.WebJobs.Host.Triggers
 {
@@ -24,7 +25,7 @@ namespace Microsoft.Azure.WebJobs.Host.Triggers
         {
             if (parameter == null)
             {
-                throw new ArgumentNullException("parameter");
+                throw new ArgumentNullException(nameof(parameter));
             }
 
             _parameter = parameter;
@@ -46,5 +47,10 @@ namespace Microsoft.Azure.WebJobs.Host.Triggers
         {
             get { return _cancellationToken; }
         }
+
+        /// <summary>
+        /// Method storage account.
+        /// </summary>
+        internal IStorageAccount StorageAccount { get; set; }
     }
 }

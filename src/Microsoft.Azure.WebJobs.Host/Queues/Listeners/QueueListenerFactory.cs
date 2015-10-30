@@ -35,37 +35,37 @@ namespace Microsoft.Azure.WebJobs.Host.Queues.Listeners
         {
             if (queue == null)
             {
-                throw new ArgumentNullException("queue");
+                throw new ArgumentNullException(nameof(queue));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (messageEnqueuedWatcherSetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherSetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherSetter));
             }
 
             if (sharedContextProvider == null)
             {
-                throw new ArgumentNullException("sharedContextProvider");
+                throw new ArgumentNullException(nameof(sharedContextProvider));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             if (executor == null)
             {
-                throw new ArgumentNullException("executor");
+                throw new ArgumentNullException(nameof(executor));
             }
 
             _queue = queue;

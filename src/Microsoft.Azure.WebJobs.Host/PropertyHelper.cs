@@ -34,7 +34,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (property == null)
             {
-                throw new ArgumentNullException("property");
+                throw new ArgumentNullException(nameof(property));
             }
 
             Name = property.Name;
@@ -67,7 +67,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (instance == null)
             {
-                throw new ArgumentNullException("instance");
+                throw new ArgumentNullException(nameof(instance));
             }
 
             return _valueGetter(instance);
@@ -82,7 +82,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (instance == null)
             {
-                throw new ArgumentNullException("instance");
+                throw new ArgumentNullException(nameof(instance));
             }
 
             return GetProperties(instance.GetType());
@@ -109,7 +109,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (property == null)
             {
-                throw new ArgumentNullException("property");
+                throw new ArgumentNullException(nameof(property));
             }
 
             MethodInfo setMethod = property.GetSetMethod();

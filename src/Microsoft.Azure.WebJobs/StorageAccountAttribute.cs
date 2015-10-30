@@ -28,8 +28,20 @@ namespace Microsoft.Azure.WebJobs
         }
 
         /// <summary>
+        /// Constructs a new instance.
+        /// </summary>
+        public StorageAccountAttribute()
+        {
+        }
+
+        /// <summary>
         /// Gets the name of the Azure Storage connection string to use.
         /// </summary>
         public string Account { get; private set; }
+
+        /// <summary>
+        /// The path to a file listing multiple Azure Storage connection strings.
+        /// </summary>
+        public string Path { get; set; }
     }
 }

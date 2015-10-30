@@ -17,7 +17,7 @@ namespace Microsoft.Azure.WebJobs.Host.Loggers
         {
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
             _trace = trace;
         }

@@ -32,12 +32,12 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Path
         {
             if (pattern == null)
             {
-                throw new ArgumentNullException("pattern");
+                throw new ArgumentNullException(nameof(pattern));
             }
 
             if (captureRegex == null)
             {
-                throw new ArgumentNullException("captureRegex");
+                throw new ArgumentNullException(nameof(captureRegex));
             }
 
             _pattern = pattern;

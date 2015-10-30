@@ -26,7 +26,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Config
         {
             if (serviceBusConfig == null)
             {
-                throw new ArgumentNullException("serviceBusConfig");
+                throw new ArgumentNullException(nameof(serviceBusConfig));
             }
 
             _serviceBusConfig = serviceBusConfig;
@@ -48,7 +48,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Config
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             // get the services we need to construct our binding providers

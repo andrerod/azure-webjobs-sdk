@@ -14,7 +14,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.Cancellation
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             ParameterInfo parameter = context.Parameter;

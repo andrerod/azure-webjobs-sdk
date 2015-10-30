@@ -34,7 +34,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (registry == null)
             {
-                throw new ArgumentNullException("registry");
+                throw new ArgumentNullException(nameof(registry));
             }
 
             registry.RegisterExtension(typeof(TExtension), extension);
@@ -50,7 +50,7 @@ namespace Microsoft.Azure.WebJobs.Host
         {
             if (registry == null)
             {
-                throw new ArgumentNullException("registry");
+                throw new ArgumentNullException(nameof(registry));
             }
 
             return registry.GetExtensions(typeof(TExtension)).Cast<TExtension>();

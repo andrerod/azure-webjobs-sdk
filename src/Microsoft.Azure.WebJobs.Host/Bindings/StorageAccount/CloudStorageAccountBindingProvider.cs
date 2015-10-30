@@ -18,7 +18,7 @@ namespace Microsoft.Azure.WebJobs.Host.Bindings.StorageAccount
         {
             if (accountProvider == null)
             {
-                throw new ArgumentNullException("accountProvider");
+                throw new ArgumentNullException(nameof(accountProvider));
             }
 
             _accountProvider = accountProvider;

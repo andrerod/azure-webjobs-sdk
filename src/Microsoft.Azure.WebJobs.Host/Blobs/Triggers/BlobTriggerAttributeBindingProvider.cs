@@ -47,47 +47,47 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Triggers
         {
             if (accountProvider == null)
             {
-                throw new ArgumentNullException("accountProvider");
+                throw new ArgumentNullException(nameof(accountProvider));
             }
 
             if (extensionTypeLocator == null)
             {
-                throw new ArgumentNullException("extensionTypeLocator");
+                throw new ArgumentNullException(nameof(extensionTypeLocator));
             }
 
             if (hostIdProvider == null)
             {
-                throw new ArgumentNullException("hostIdProvider");
+                throw new ArgumentNullException(nameof(hostIdProvider));
             }
 
             if (queueConfiguration == null)
             {
-                throw new ArgumentNullException("queueConfiguration");
+                throw new ArgumentNullException(nameof(queueConfiguration));
             }
 
             if (backgroundExceptionDispatcher == null)
             {
-                throw new ArgumentNullException("backgroundExceptionDispatcher");
+                throw new ArgumentNullException(nameof(backgroundExceptionDispatcher));
             }
 
             if (blobWrittenWatcherSetter == null)
             {
-                throw new ArgumentNullException("blobWrittenWatcherSetter");
+                throw new ArgumentNullException(nameof(blobWrittenWatcherSetter));
             }
 
             if (messageEnqueuedWatcherSetter == null)
             {
-                throw new ArgumentNullException("messageEnqueuedWatcherSetter");
+                throw new ArgumentNullException(nameof(messageEnqueuedWatcherSetter));
             }
 
             if (sharedContextProvider == null)
             {
-                throw new ArgumentNullException("sharedContextProvider");
+                throw new ArgumentNullException(nameof(sharedContextProvider));
             }
 
             if (trace == null)
             {
-                throw new ArgumentNullException("trace");
+                throw new ArgumentNullException(nameof(trace));
             }
 
             _nameResolver = nameResolver;
@@ -148,7 +148,15 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Triggers
             }
 
             IStorageAccount hostAccount = await _accountProvider.GetStorageAccountAsync(context.CancellationToken);
-            IStorageAccount dataAccount = await _accountProvider.GetStorageAccountAsync(context.Parameter, context.CancellationToken);
+            IStorageAccount dataAccount;
+            if (context.StorageAccount == null)
+            {
+                dataAccount = await _accountProvider.GetStorageAccountAsync(context.Parameter, context.CancellationToken);
+            }
+            else
+            {
+                dataAccount = context.StorageAccount;
+            }
 
             ITriggerBinding binding = new BlobTriggerBinding(parameter, argumentBinding, hostAccount, dataAccount, path,
                 _hostIdProvider, _queueConfiguration, _backgroundExceptionDispatcher, _blobWrittenWatcherSetter,

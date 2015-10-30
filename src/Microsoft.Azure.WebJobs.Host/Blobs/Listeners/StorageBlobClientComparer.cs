@@ -14,11 +14,11 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (x == null)
             {
-                throw new ArgumentNullException("x");
+                throw new ArgumentNullException(nameof(x));
             }
             if (y == null)
             {
-                throw new ArgumentNullException("y");
+                throw new ArgumentNullException(nameof(y));
             }
 
             return x.Credentials.AccountName == y.Credentials.AccountName;
@@ -28,7 +28,7 @@ namespace Microsoft.Azure.WebJobs.Host.Blobs.Listeners
         {
             if (obj == null)
             {
-                throw new ArgumentNullException("obj");
+                throw new ArgumentNullException(nameof(obj));
             }
 
             return obj.Credentials.AccountName.GetHashCode();

@@ -13,7 +13,7 @@ namespace Dashboard
         {
             if (config == null)
             {
-                throw new ArgumentNullException("config");
+                throw new ArgumentNullException(nameof(config));
             }
 
             config.MapHttpAttributeRoutes();

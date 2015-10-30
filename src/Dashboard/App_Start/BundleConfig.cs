@@ -15,7 +15,7 @@ namespace Dashboard
         {
             if (bundles == null)
             {
-                throw new ArgumentNullException("bundles");
+                throw new ArgumentNullException(nameof(bundles));
             }
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(

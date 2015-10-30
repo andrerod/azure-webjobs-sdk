@@ -33,7 +33,7 @@ namespace Dashboard.Data
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             return _store.CreateOrUpdateIfLatest(snapshot.Id, snapshot.HostVersion, CreateOtherMetadata(snapshot), snapshot);
@@ -43,7 +43,7 @@ namespace Dashboard.Data
         {
             if (snapshot == null)
             {
-                throw new ArgumentNullException("snapshot");
+                throw new ArgumentNullException(nameof(snapshot));
             }
 
             return _store.UpdateOrCreateIfLatest(snapshot.Id, snapshot.HostVersion, CreateOtherMetadata(snapshot),

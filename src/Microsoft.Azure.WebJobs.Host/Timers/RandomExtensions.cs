@@ -11,7 +11,7 @@ namespace Microsoft.Azure.WebJobs.Host.Timers
         {
             if (random == null)
             {
-                throw new ArgumentNullException("random");
+                throw new ArgumentNullException(nameof(random));
             }
 
             return ((maxValue - minValue) * random.NextDouble()) + minValue;

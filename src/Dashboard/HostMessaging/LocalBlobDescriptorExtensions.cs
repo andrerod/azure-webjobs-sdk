@@ -14,7 +14,7 @@ namespace Dashboard.HostMessaging
         {
             if (descriptor == null)
             {
-                throw new ArgumentNullException("descriptor");
+                throw new ArgumentNullException(nameof(descriptor));
             }
 
             if (connectionString == null)
@@ -30,7 +30,7 @@ namespace Dashboard.HostMessaging
         {
             if (descriptor == null)
             {
-                throw new ArgumentNullException("descriptor");
+                throw new ArgumentNullException(nameof(descriptor));
             }
 
             if (account == null)
